@@ -1,0 +1,5 @@
+ABINITIO_PREDICTION      AUGUSTUS       1 
+ABINITIO_PREDICTION      SNAP           1 
+ABINITIO_PREDICTION      GeneMark.hmm   1 
+PROTEIN         exonerate               5 
+TRANSCRIPT      assembler-x             10 
