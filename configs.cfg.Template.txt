@@ -1,0 +1,48 @@
+[Project]
+# indicate the directory where all the project results files will be produced
+# Required
+project_name=
+# Required
+genome=
+# Required
+masked_genome=
+# Required, should be set for Trichoderma species annotation
+homology_protein=
+# Number of processes to use
+# Required
+cores=4
+
+# Required by PASA
+mysql_user_name=
+mysql_user_passwd=
+
+# Required by Exonerate, build protein Homology models. The overall score threshold. Alignments
+# will not be reported below this threshold
+similarity=80
+# Required by Exonerate, smallest allowed intron size for alignment of transcripts to genome.
+min_intron_length=10
+# Required by Exonerate, largest allowed intron size for alignment of transcripts to genome.
+max_intron_length=3000
+
+[filter]
+filter_intron_max=3000
+filter_protein_min=50
+
+[RNA-Seq]
+min_percent_aligned=90
+min_avg_per_id=95
+
+# Required by PASA, fasta format, assembled from RNA-Seq reads
+transcripts_assembled_fas=
+
+# Required by AUGUSTUS, gff file containing intron hint, format like below:
+# contig_0001  b2h intron  1003274 1003339 398 -   .   mult=398;pri=4;src=E
+intron_gff_aug=
+
+# Required by GeneMark-ET, gff file containing intron hints, for GeneMart-ET, format like below:
+# contig_0001  STAR240f1   intron  1003274 1003339 398 -   .   .
+intron_gff_gmet=
+# Required by GeneMark-ET, along with intron gff file, default is 4, in case of TopHat2, the score should be 10,
+# if UnSplicer or TruSight are used then default value should be set 0.5
+intron_score=4
+
